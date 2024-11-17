@@ -1,0 +1,127 @@
+*{
+  /* border: 1px solid black; */
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+   color: black;
+   font-family: "Oswald", sans-serif;
+    font-weight: 400;
+  }
+  body{
+    background-image: url(58d2ec5f-66a7-4215-91ce-c255d8434907.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  nav{
+    width: 100%;
+    height: 50px;
+    background-color: skyblue;
+    text-align: end;
+  }
+  
+  nav button{
+    border: none;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10px;
+    color: black;
+    height: 25px;
+    margin-right: 2%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  button:hover{
+    opacity: 0.9;
+  }
+  
+  #transp{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(red, green, blue, 0.04);
+    position: fixed;
+    top: 0;
+  }
+  
+  body {
+    text-align: center;
+  }
+  
+  #modal {
+    position: absolute;
+    background-color: rgb(167, 221, 243);
+    width: 35%;
+    border-radius: 10px;
+    border: solid 1px;
+    padding: 1em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .esconder{
+    opacity: 0;
+    z-index: -1;
+  }
+
+  #fechar{
+    margin-left: 90%;
+    border: none;
+  }
+
+
+
+
+  
+  input {
+    border: 0px;
+    border-bottom: solid 1px;
+    background-color: transparent;
+    transition: 1.5s;
+    
+}
+
+input:focus {
+    border-bottom: solid 1px blue;
+    outline: none;
+    transition: 1.5s;
+}
+
+input:hover {
+    border-bottom: solid 1px skyblue;
+    transition: 1.5s;
+}
+
+#formulario {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 0.3fr 0.3fr;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+    width: 320px;
+    margin-left: 27%;
+    margin-top: 10%;
+    
+}
+
+#formulario  button {
+    margin-top: 50%;
+    background-color: whitesmoke;
+    transition: 1.5s;
+}
+#texto{
+    margin-top: 5%;
+    font-size: xx-large;
+}
+#formulario button{
+    border: none;
+    height: 30%;
+    font: "Oswald", sans-serif;
+    margin-bottom:30%;
+    margin-left: 148%;
+    font-size: 20px;
+}
+#formulario button:hover{
+  font-size: 23px;
+}

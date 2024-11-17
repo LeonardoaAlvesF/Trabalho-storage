@@ -1,0 +1,57 @@
+body { 
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    background-image: url(DALL·E\ 2024-11-17\ 11.37.14\ -\ A\ clean\,\ high-resolution\ background\ image\ for\ a\ website\ with\ a\ light\ blue\ sky\ theme.\ Minimal\ geometric\ shapes\,\ like\ soft\ circles\ and\ rounded\ rectangle.webp);
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+*{
+   text-decoration: none; 
+   color: black;
+   font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+span{
+    text-align: left;
+}
+#formulario {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 0.3fr 0.3fr;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+    width: 300px;
+    width: 500px;
+    margin-top: 12%;
+    margin-left: 39%;  
+}
+#formulario span{
+    border-bottom: 2px solid #27272727;
+}
+#formulario  button {
+    margin-top: 50%;
+    background-color: whitesmoke;
+}
+#texto{
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 40px;
+}
+#formulario button{
+    margin-bottom:30%;
+}
+#formulario button{
+    border-radius: 20%;
+    margin-left: 32%;
+    border: none;
+    background-color: rgb(0, 172, 240);
+    height: 50%;
+    width: 50%;
+    font: "Oswald", sans-serif;
+    transition: 2s;
+}
+
+#formulario button:hover{
+    background-color: skyblue;
+    transition: 1s;
+}
+

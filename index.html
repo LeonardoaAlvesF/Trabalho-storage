@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho storage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <button id="abrir">Login/Cadastro</button>
+</nav>
+
+<dialog id="modal">
+  <a id="fechar" href="perfil.html"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a>
+  <h2>Cadastre-se</h2>
+  <p><form id="formulario">
+    <label>Nome</label>
+    <input type="text" id="nome">
+  
+    <label>E-mail</label>
+    <input type="text" id="email">
+
+    <label>Telefone</label>
+    <input type="text" placeholder="(xx) x xxxx-xxxx" id="telefone"  oninput=mascara_telefone() maxlength="16">
+
+    <label>CPF</label>
+    <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" oninput=mascara_cpf() maxlength="14">
+
+    <label>Senha</label>
+    <input type="password" id="senha">
+    
+    <button type="submit"  onclick="mostrarAlerta()">Enviar</button>
+
+</form>
+</p>
+
+    
+</dialog>
+</body>
+<script>
+    const abrir = document.querySelector("#abrir")
+    const fechar = document.querySelector("#fechar")
+    const modal = document.querySelector("#modal")
+    const transp = document.querySelector("#transp")
+    
+    
+    abrir.addEventListener("click",()=>{
+      modal.showModal()
+    })
+    
+    fechar.addEventListener("click",()=>{
+      modal.close()
+    })
+</script>
+<script>
+
+    document.getElementById("formulario").onsubmit = function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const cpf = document.getElementById("cpf").value;
+    const senha = document.getElementById("senha").value;
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("email", email);
+    localStorage.setItem("telefone", telefone);
+    localStorage.setItem("cpf", cpf);
+    localStorage.setItem("senha", senha);
+    
+
+    
+};
+</script>
+<script>function mostrarAlerta() {
+  alert("Seu cadastro foi realizado");
+}
+</script>
+</html>
